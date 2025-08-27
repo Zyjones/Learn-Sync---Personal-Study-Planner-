@@ -1,0 +1,7 @@
+Notebooks/unified_chroma_db/
+unified_chroma_db/
+.env
+*.sqlite
+*.db
+*.chroma
+*.parquet
