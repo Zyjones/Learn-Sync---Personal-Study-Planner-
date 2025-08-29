@@ -6,6 +6,7 @@ def weakpoint_detector(feedback, retriever) -> str:
     # Get assignment prompt and rubric-related context
     context = retriever.get_relevant_documents("What is the ad-hoc analysis assignment_prompt?")
     
+
     # Build a stronger, more structured prompt
     prompt = f"""
     You are Agent Weakpoint Detector. 

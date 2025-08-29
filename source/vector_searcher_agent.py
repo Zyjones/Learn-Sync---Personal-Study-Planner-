@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+from openai import OpenAI
+
 #AI Agent: Vector Searcher:
   #This agent will look into the vector database to connect the weakpoints to the content
 
@@ -21,6 +24,7 @@ def search_relevant_content(weakpoints, retriever: dict) -> dict:
   
   """
   # get back answer from `gpt-4o-mini` using context & prompt
+  client = OpenAI()
   resp = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
