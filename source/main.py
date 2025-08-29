@@ -2,9 +2,9 @@
 from pathlib import Path
 
 from source.utils import load_data, setup_vector_store, get_openai_client
-from source.weakpoint_agent import analyze_weakpoints
-from source.vector_searcher_agent import search_relevant_content
-from source.study_planner import create_study_plan
+from source.weakpoint_agent import weakpoint_detector
+#from source.vector_searcher_agent import search_relevant_content
+#from source.study_planner import create_study_plan
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "Data" / "Student_rubric_feedback.csv"
@@ -30,8 +30,9 @@ def main():
 
     # 5) Agents (implemented by teammates)
     print("Analyzing weak points…")
-    weakpoints = analyze_weakpoints(feedback, retriever)
-
+    weakpoints = weakpoint_detector(feedback, retriever)
+    print(weakpoints)
+"""
     print("Searching for relevant learning materials…")
     content_locations = search_relevant_content(weakpoints, retriever)
 
@@ -46,6 +47,6 @@ def main():
 
     OUT_PATH.write_text(study_plan, encoding="utf-8")
     print(f"\nSaved to {OUT_PATH}")
-
+"""
 if __name__ == "__main__":
     main()
