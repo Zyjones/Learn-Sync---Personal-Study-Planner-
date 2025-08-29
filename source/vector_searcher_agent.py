@@ -6,11 +6,11 @@
     #Student 1 Weakpoint: Information Located
     #
 
-def vector_Searcher(weakpoints: dict) -> dict:
+def search_relevant_content(weakpoints, retriever: dict) -> dict:
   #This agent will look into the vector database to connect the weakpoints to the content
 
   #Grab context for the weakpoints
-  context = vector_retriever.get_relevant_documents("What is the ad-hoc analysis assignment_prompt?")
+  context = retriever.get_relevant_documents("What is the ad-hoc analysis assignment_prompt?")
   
 
   #Create a prompt for Agent Weakpoint Detector
