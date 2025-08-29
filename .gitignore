@@ -5,3 +5,5 @@ unified_chroma_db/
 *.db
 *.chroma
 *.parquet
+.DS_Store
+__pycache__/
