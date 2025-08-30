@@ -1,0 +1,158 @@
+Here's a 7-day study plan tailored for each student based on their specific weakpoints and the resources available to them. Each day includes time blocks dedicated to studying, broken into 30-minute sessions with breaks in between.
+
+```python
+study_plan = {
+    "Student 1": {
+        "Monday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review SQL Joins concepts", "resources": "Advanced SQL I copy slides 10-12"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Practice SQL join problems", "resources": "Advanced SQL I copy slides 10-12"}
+        ],
+        "Tuesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review INNER JOIN statements", "resources": "Advanced SQL I copy slides 5-6"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Practice INNER JOIN queries", "resources": "Advanced SQL I copy slides 5-6"}
+        ],
+        "Wednesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Explore LEFT and RIGHT JOINs", "resources": "Advanced SQL I copy slides 10-12"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Practice LEFT and RIGHT JOIN queries", "resources": "Advanced SQL I copy slides 10-12"}
+        ],
+        "Thursday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review FULL JOIN concepts", "resources": "Advanced SQL I copy slides 10-12"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Practice FULL JOIN queries", "resources": "Advanced SQL I copy slides 10-12"}
+        ],
+        "Friday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Combine different JOINs in a single query", "resources": "Advanced SQL I copy slides 10-12"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test combined JOIN queries", "resources": "Advanced SQL I copy slides 10-12"}
+        ],
+        "Saturday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Review all JOIN types", "resources": "Advanced SQL I copy slides 10-12"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Take a practice quiz on SQL Joins", "resources": "Online SQL practice platform"}
+        ],
+        "Sunday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Reflect on learning and identify areas for improvement", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Plan next week's study based on reflections", "resources": "Personal notes"}
+        ]
+    },
+    "Student 2": {
+        "Monday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Break down the first ad-hoc question", "resources": "Assignment prompt, Section on DML SQL queries"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Write a basic SELECT statement", "resources": "Assignment prompt, Section on DML SQL queries"}
+        ],
+        "Tuesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Add WHERE clause to the SELECT statement", "resources": "Assignment prompt, Section on DML SQL queries"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test the query in sqlite3", "resources": "sqlite3 shell"}
+        ],
+        "Wednesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Work on the second ad-hoc question", "resources": "Assignment prompt, Section on DML SQL queries"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Incorporate GROUP BY into the query", "resources": "Assignment prompt, Section on DML SQL queries"}
+        ],
+        "Thursday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Work on the third ad-hoc question", "resources": "Assignment prompt, Section on DML SQL queries"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Add ORDER BY clause to the query", "resources": "Assignment prompt, Section on DML SQL queries"}
+        ],
+        "Friday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review all queries written so far", "resources": "Personal notes"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test all queries in sqlite3", "resources": "sqlite3 shell"}
+        ],
+        "Saturday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Refine queries based on test results", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Seek feedback from peers or instructors", "resources": "Peer review"}
+        ],
+        "Sunday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Reflect on learning and identify areas for improvement", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Plan next week's study based on reflections", "resources": "Personal notes"}
+        ]
+    },
+    "Student 3": {
+        "Monday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review pandas for data manipulation", "resources": "Assignment prompt, Section on generating visualizations using pandas"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Practice basic data manipulation with pandas", "resources": "Pandas documentation"}
+        ],
+        "Tuesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Explore matplotlib for visualization", "resources": "Assignment prompt, Section on generating visualizations using pandas"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Create a simple bar chart", "resources": "Matplotlib documentation"}
+        ],
+        "Wednesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Learn about seaborn for advanced visualization", "resources": "Assignment prompt, Section on generating visualizations using pandas"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Create a scatter plot using seaborn", "resources": "Seaborn documentation"}
+        ],
+        "Thursday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review different types of visualizations", "resources": "Assignment prompt, Section on generating visualizations using pandas"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Practice creating line graphs", "resources": "Matplotlib documentation"}
+        ],
+        "Friday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Combine multiple visualizations into one report", "resources": "Personal project"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test visualizations with mock data", "resources": "Mock dataset"}
+        ],
+        "Saturday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Review all visualizations created", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Seek feedback on visualizations", "resources": "Peer review"}
+        ],
+        "Sunday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Reflect on learning and identify areas for improvement", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Plan next week's study based on reflections", "resources": "Personal notes"}
+        ]
+    },
+    "Student 4": {
+        "Monday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Outline report structure", "resources": "Assignment prompt, Section on report structure and numerical details"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Draft introduction section", "resources": "Personal notes"}
+        ],
+        "Tuesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Draft methodology section", "resources": "Assignment prompt, Section on report structure and numerical details"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Include SQL query details", "resources": "Personal notes"}
+        ],
+        "Wednesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Draft findings section", "resources": "Assignment prompt, Section on report structure and numerical details"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Incorporate visualizations into findings", "resources": "Personal project"}
+        ],
+        "Thursday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Draft conclusion section", "resources": "Assignment prompt, Section on report structure and numerical details"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Review findings and conclusions", "resources": "Personal notes"}
+        ],
+        "Friday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Edit and refine the report", "resources": "Personal notes"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Seek feedback on report structure", "resources": "Peer review"}
+        ],
+        "Saturday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Incorporate feedback into the report", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Finalize report for submission", "resources": "Personal notes"}
+        ],
+        "Sunday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Reflect on learning and identify areas for improvement", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Plan next week's study based on reflections", "resources": "Personal notes"}
+        ]
+    },
+    "Student 5": {
+        "Monday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Review iterative query building concepts", "resources": "Assignment prompt, Section on building SQL queries iteratively"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Start with a simple query", "resources": "sqlite3 shell"}
+        ],
+        "Tuesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Add complexity to the query step by step", "resources": "sqlite3 shell"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test the query after each change", "resources": "sqlite3 shell"}
+        ],
+        "Wednesday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Document thought process and errors", "resources": "Personal notes"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Seek feedback on the query from peers", "resources": "Peer review"}
+        ],
+        "Thursday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Refine the query based on feedback", "resources": "Personal notes"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test the refined query", "resources": "sqlite3 shell"}
+        ],
+        "Friday": [
+            {"time": "9:00 AM - 9:30 AM", "activity": "Work on additional queries iteratively", "resources": "sqlite3 shell"},
+            {"time": "9:30 AM - 10:00 AM", "activity": "Test and document each query", "resources": "Personal notes"}
+        ],
+        "Saturday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Review all queries built iteratively", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Seek feedback on all queries", "resources": "Peer review"}
+        ],
+        "Sunday": [
+            {"time": "10:00 AM - 10:30 AM", "activity": "Reflect on learning and identify areas for improvement", "resources": "Personal notes"},
+            {"time": "10:30 AM - 11:00 AM", "activity": "Plan next week's study based on reflections", "resources": "Personal notes"}
+        ]
+    }
+}
+```
+
+This study plan is structured to help each student focus on their specific weakpoints while incorporating effective study techniques such as spaced repetition and retrieval practice. Each session is designed to build upon the previous one, ensuring a comprehensive understanding of the material.

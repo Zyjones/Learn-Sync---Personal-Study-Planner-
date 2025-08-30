@@ -1,0 +1,143 @@
+Here's a 7-day study plan for Student 1, focusing on the identified weakpoints and incorporating SMART goals, spaced repetition, and retrieval practice. Each day includes dedicated time blocks for studying specific skills, broken into 30-minute sessions with breaks in between.
+
+```python
+{
+    "Student 1": {
+        "Monday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Review SQL Joins",
+                "Resources": {
+                    "File Name": "Advanced SQL I copy.pdf",
+                    "Pages": "10-12"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Practice SQL problems related to joins",
+                "Resources": {
+                    "File Name": "Advanced SQL I copy.pdf",
+                    "Pages": "10-12"
+                }
+            }
+        },
+        "Tuesday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Deep dive into INNER JOIN statements",
+                "Resources": {
+                    "File Name": "Advanced SQL II copy.pptx.pdf",
+                    "Pages": "5-6"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Write queries using INNER JOIN",
+                "Resources": {
+                    "File Name": "Advanced SQL II copy.pptx.pdf",
+                    "Pages": "5-6"
+                }
+            }
+        },
+        "Wednesday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Refactor existing SQL queries for style",
+                "Resources": {
+                    "File Name": "Advanced SQL II copy.pptx.pdf",
+                    "Pages": "1-41"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Seek examples of well-structured SQL queries",
+                "Resources": {
+                    "File Name": "Advanced SQL II copy.pptx.pdf",
+                    "Pages": "1-41"
+                }
+            }
+        },
+        "Thursday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Integrate visualizations into analysis",
+                "Resources": {
+                    "File Name": "Data/Assignment_prompt.pdf",
+                    "Pages": "1-2"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Create visualizations using Matplotlib",
+                "Resources": {
+                    "File Name": "Data/Assignment_prompt.pdf",
+                    "Pages": "1-2"
+                }
+            }
+        },
+        "Friday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Document findings with supporting evidence",
+                "Resources": {
+                    "File Name": "Data/Assignment_prompt.pdf",
+                    "Pages": "1-2"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Practice data storytelling techniques",
+                "Resources": {
+                    "File Name": "Data/Assignment_prompt.pdf",
+                    "Pages": "1-2"
+                }
+            }
+        },
+        "Saturday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Create a schedule for assignment checkpoints",
+                "Resources": {
+                    "File Name": "Data/Assignment_prompt.pdf",
+                    "Pages": "1-2"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Set milestones for the assignment",
+                "Resources": {
+                    "File Name": "Data/Assignment_prompt.pdf",
+                    "Pages": "1-2"
+                }
+            }
+        },
+        "Sunday": {
+            "Session 1": {
+                "Time": "9:00 AM - 9:30 AM",
+                "Activity": "Review all SQL queries and practice",
+                "Resources": {
+                    "File Name": "Advanced SQL I copy.pdf",
+                    "Pages": "10-12"
+                }
+            },
+            "Break": "9:30 AM - 9:45 AM",
+            "Session 2": {
+                "Time": "9:45 AM - 10:15 AM",
+                "Activity": "Conduct a self-assessment on progress",
+                "Resources": {
+                    "File Name": "Advanced SQL II copy.pptx.pdf",
+                    "Pages": "1-41"
+                }
+            }
+        }
+    }
+}
+```
+
+This study plan provides a structured approach for Student 1 to address their weakpoints effectively while ensuring they have the necessary resources at hand. Each day focuses on specific skills, allowing for gradual improvement and mastery of SQL concepts.
