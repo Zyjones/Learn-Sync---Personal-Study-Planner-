@@ -7,3 +7,5 @@ unified_chroma_db/
 *.parquet
 .DS_Store
 __pycache__/
+# Ignore generated output file
+personalized_study_plan.txt

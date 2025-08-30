@@ -6,6 +6,9 @@ from source.weakpoint_agent import weakpoint_detector
 from source.vector_searcher_agent import search_relevant_content
 from source.study_planner import create_study_plan
 
+import os
+os.environ['OPENAI_API_KEY'] = '...'
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "Data" / "Student_rubric_feedback.csv"
 OUT_PATH = ROOT / "personalized_study_plan.txt"
@@ -23,21 +26,21 @@ def main():
     retriever = vector_store.as_retriever(search_kwargs={"k": 3})
 
     # 3) LLM (available if agents need it)
-    llm = get_openai_client()  # noqa: F841
+    llm = get_openai_client()
 
     # 4) Student -> list of feedback strings
     feedback = df.groupby("Student")["Feedback"].apply(list).to_dict()
 
     # 5) Agents (implemented by teammates)
     print("Analyzing weak points…")
-    weakpoints = weakpoint_detector(feedback, retriever)
+    weakpoints = weakpoint_detector(feedback, retriever, llm)
     print(weakpoints)
 
     print("Searching for relevant learning materials…")
-    content_locations = search_relevant_content(weakpoints, retriever)
+    content_locations = search_relevant_content(weakpoints, retriever, llm)
 
     print("Creating study plan…")
-    study_plan = create_study_plan(weakpoints, content_locations, retriever)
+    study_plan = create_study_plan(weakpoints, content_locations, retriever, llm)
 
     # 6) Output
     print("\n" + "=" * 50)

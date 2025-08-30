@@ -1,35 +1,20 @@
-from dotenv import load_dotenv
-from openai import OpenAI
+# source/vector_searcher_agent.py
 
-#AI Agent: Vector Searcher:
-  #This agent will look into the vector database to connect the weakpoints to the content
+def search_relevant_content(weakpoints, retriever, llm) -> dict:
+  """
+  This agent will look into the vector database to connect the weakpoints to the course materials.
+  """
+  # Grab context for the weakpoints
+  context = retriever.invoke("What is the ad-hoc analysis assignment_prompt?")
 
-  #give us clusters of where the information is at (for example, Join information are in Advanced SQL I copy slides 10-12)
-  #Output (Dictionary?)
-    #Student 1 Weakpoint: Information Located
-    #
-
-def search_relevant_content(weakpoints, retriever: dict) -> dict:
-  #This agent will look into the vector database to connect the weakpoints to the content
-
-  #Grab context for the weakpoints
-  context = retriever.get_relevant_documents("What is the ad-hoc analysis assignment_prompt?")
-  
-
-  #Create a prompt for Agent Weakpoint Detector
+  # Create a prompt for Agent Vector Searcher
   prompt = f""" 
-  You are Agent Weakpoint Detector. You job is to utilize the {weakpoints} and {context} to give us clusters of where the information is at (for example, Join information are in Advanced SQL I copy slides 10-12)
+  You are Agent Vector Searcher. You job is to utilize the {weakpoints} and {context} to give us clusters of where the information is at (for example, Join information are in Advanced SQL I copy slides 10-12)
   I want the output as a dictionary
   Example: Student 1 Weakpoint: Information Located
   
   """
-  # get back answer from `gpt-4o-mini` using context & prompt
-  client = OpenAI()
-  resp = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.2,
-    )
-  cleaned = resp.choices[0].message.content.strip()
-  #print(cleaned)
+  # Corrected API call using llm.invoke()
+  resp = llm.invoke(prompt)
+  cleaned = resp.content.strip()
   return cleaned

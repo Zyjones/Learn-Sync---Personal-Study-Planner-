@@ -1,11 +1,10 @@
-
+# source/weakpoint_agent.py
 from dotenv import load_dotenv
-from openai import OpenAI
 
-def weakpoint_detector(feedback, retriever) -> str:
+# The agent now takes the llm client as an argument
+def weakpoint_detector(feedback, retriever, llm) -> str:
     # Get assignment prompt and rubric-related context
-    context = retriever.get_relevant_documents("What is the ad-hoc analysis assignment_prompt?")
-    
+    context = retriever.invoke("What is the ad-hoc analysis assignment_prompt?")
 
     # Build a stronger, more structured prompt
     prompt = f"""
@@ -23,18 +22,9 @@ def weakpoint_detector(feedback, retriever) -> str:
 
     """
 
-    # Call OpenAI API with slightly higher temperature for more detail
-    client = OpenAI()
-    resp = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.2,
-    )
+    # Corrected API call using llm.invoke()
+    resp = llm.invoke(prompt)
 
-    raw_output = resp.choices[0].message.content.strip()
-    cleaned = raw_output.replace("\\n", "\\n")
+    raw_output = resp.content.strip()
+    cleaned = raw_output.replace("\\n", "\n")
     return cleaned
-
-# Calling the function:
-#weakpoints = weakpoint_detector(feedback, retriever)
-#print(weakpoints)
